@@ -1,0 +1,8 @@
+-- Q1: All Premium users' names
+SELECT full_name FROM users WHERE plan = 'Premium';
+-- Q2: Users whose age is missing
+SELECT full_name, age FROM users WHERE age IS NULL;
+-- Q3: Total monthly revenue from active users only
+SELECT SUM(monthly_price) FROM users WHERE is_active = 1;
+-- Q4: Average show rating (1 show skipped because its rating is NULL)
+SELECT AVG(rating) FROM shows;
