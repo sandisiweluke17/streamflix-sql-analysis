@@ -1,11 +1,17 @@
 # Project Process Journal
 
 ## My approach
-
+I created the database by executing streamflix_setup.sql in SQLiteOnline. I then confirmed that it contained 12 users, 10 shows and 25 views. 
+I then completed the project in four sections: A covered the foundations, B focused on grouping, C covered JOINs and D focused on deeper data analysis.
+Atter that I ran each query in SQLiteOnline to test it, recorded it in analysis.sql with a numbered comment, and then uploaded my work to GitHub through my streamflix-sql-analysis repository.
+To make sure my queries were correct, I compared the results with the expected answers in the project brief. For example, Q3 should return 1242 and Q11 should identify Township Tales. Whenever a result was incorrect, I reviewed and corrected the query.
 ## Challenges and how I solved them
 
 ### 1. 
+I encountered the error SQLITE_ERROR: no such table: users when I tried to run a query before creating the database tables. I fixed this by clearing the editor, running the complete streamflix_setup.sql file and then running my verification query. I learned that the tables must first be created before I can query them.
 ### 2. 
+Notepad saved my file as `analysis.sql.txt` because the Save as type option was set to Text Documents. I fixed this by selecting All Files and naming the file analysis.sql.
 ### 3. 
-
+While trying to rename a second queries file to analysis.sql on GitHub, I received the message A file with the same name already exists. This happened because an analysis.sql file was already in the repository. I fixed this by combining all my queries into one analysis.sql file and deleting the extra .txt files.
 ## What I learned
+I'm becoming more comfortable using JOINs because I was able to combine information from different tables and successfully retrieve the expected 25 rows in Q9. I also have a better understanding of how `LOWER()` works, as demonstrated in Q17, where it helped combine differently capitalised versions of the same country name into one consistent value. In future projects, I would save my file with the correct `.sql` extension from the beginning and commit my progress after completing each section to keep my work organised and avoid unnecessary errors.
