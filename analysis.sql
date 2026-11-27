@@ -24,3 +24,13 @@ SELECT s.title, COUNT(*) AS plays FROM views v JOIN shows s ON v.show_id = s.sho
 SELECT u.plan, COUNT(*) AS total_views FROM views v JOIN users u ON v.user_id = u.user_id GROUP BY u.plan;
 -- Q13: Top 3 most-engaged users by total minutes watched
 SELECT u.full_name, SUM(v.minutes_watched) AS total_minutes FROM views v JOIN users u ON v.user_id = u.user_id GROUP BY u.user_id ORDER BY total_minutes DESC LIMIT 3;
+-- Q14: Users who have never watched anything
+SELECT u.full_name FROM users u LEFT JOIN views v ON v.user_id = u.user_id WHERE v.view_id IS NULL;
+-- Q15: Users who pay more than the average monthly price
+SELECT full_name, monthly_price FROM users WHERE monthly_price > (SELECT AVG(monthly_price) FROM users);
+-- Q16: Churn rate (% cancelled) by plan
+SELECT plan, ROUND(100.0 * SUM(CASE WHEN is_active = 0 THEN 1 ELSE 0 END) / COUNT(*), 1) AS churn_pct FROM users GROUP BY plan;
+-- Q17: Users per country, treating both spellings as one
+SELECT LOWER(country) AS country_clean, COUNT(*) FROM users GROUP BY LOWER(country);
+-- Q18: Label each show by rating
+SELECT title, rating, CASE WHEN rating IS NULL THEN 'Not rated yet' WHEN rating >= 8 THEN 'Highly rated' ELSE 'Average' END AS rating_label FROM shows;
