@@ -1,1 +1,12 @@
+# StreamFlix Findings
 
+## 1. Revenue
+StreamFlix's monthly revenue from active customers is R1,242, with the Premium plan earning the most amount at R796. This amounts to roughly 64.1% of total earnings. As it makes up the most percentage of subscription revenue, the business is strongest in Premium.
+## 2. Churn
+The Standard plan is losing the most customers, with a 75% churn rate. Three of the four cancellations made by the users have never watched anything. This means that cancelations can be related with low involvement, even when the statistics cannot demonstrate the reasons behind these customers terminations.
+## 3. Engagement
+Township Tales is the most played show with five plays, while drama is the most watched genre with 654 minutes. The fact that all three of the top users are on the Premium plan indicates that Premium users are quite active. Drama and Township Tales are major areas of interaction, therefore StreamFlix should encourage these while maintaining the Premium experience.
+## 4. Data quality
+South Africa is spelled twice in the nation column, which means a typical total would reflect five and one users rather than six. This is important for businesses because inaccurate data can influence marketing and reporting choices. When new data is entered, I would advise the data team to apply consistent formatting, eliminate errors and standardize country names.
+## 5. Recommendation and limitation
+I recommend StreamFlix to better its onboarding approach and promote new subscribers to begin watching quality content. Due to the limited dataset, we are unable to confidently predict the results of this investigation to all clients. In addition, we are also unable to pinpoint the specific causes of cancelations.
